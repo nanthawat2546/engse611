@@ -64,3 +64,16 @@ console.log(output, typeof output);
 
 //  More info on the "function object" type
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+let num1 =1.2;
+let str ='hello';
+console.log(typeof num1);
+console.log(typeof str);
+console.log(parseInt(str), typeof parseInt(str));
+console.log(num1.toString(), typeof num1.toString());
+
+
+const numbers2 = new Array();
+numbers2[0]=20;
+console.log
