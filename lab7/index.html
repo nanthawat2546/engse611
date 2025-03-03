@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>    
+<html>    
+<body> 
+</script>
+<p>Click the button to create a Checkbox.</p>    
+
+<button onclick="myFunction()">Try it</button>    
+
+<script>    
+
+function myFunction() {    
+
+  var x = document.createElement("INPUT");    
+
+  x.setAttribute("type", "checkbox");    
+
+  document.body.appendChild(x);    
+
+}   
+function printName(name){
+    console.log(name);
+
+    } 
+
+    printName('A');
+    const printName2 = (name)=>{
+        console.log(name);
+    }
+    printName2('B');
+    const printName3 = (number) => {
+        return value.toUpperCase()};
+        const mul = (number) => {
+ return number * 2
+}
+console.log(mul(2))
+
+
+    let names = ["Metin", "Mateo", "Tony", "Chris", "Leo"];
+names = names.map((value) => {
+    return value.toUpperCase()
+});
+
+/*
+setTimeout(() => {
+    console.log("This message will display");
+    console.log("After 5 second");
+    alert('Time-up');
+    console.log(names);
+}, 5000);
+*/
+
+class User {
+    constructor() {
+        this.name = "Metin";
+    }
+}
+
+let sayHi_Normal = function () {
+    console.log("Hi " + this.name);
+};
+
+let sayHi_Arrow = () => {
+    console.log("Hi " + this.name);
+};
+
+let user = new User();
+let sayHi1 = sayHi_Normal.bind(user);
+let sayHi2 = sayHi_Arrow.bind(user);
+
+sayHi1();
+sayHi2();
+</script>    
+
+</body>    
+</html>    

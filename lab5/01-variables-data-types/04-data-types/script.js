@@ -1,17 +1,3 @@
-/*
-
-let a=1;
-let b=2.3;
-
-console.log(a);
-console.log(b);
-b=8;
-console.log(b);
-b="Test";
-console.log(b);
-
-
-*/
 // String
 const firstName = 'Sara';
 
@@ -21,27 +7,19 @@ const temp = 98.9;
 
 // Boolean
 const hasKids = true;
-console.log(hasKids);
 
 // Null
 const aptNumber = null;
-console.log(aptNumber);
 
 // Undefined
 // let score;
-let scoreA;
 const score = undefined;
-console.log(scoreA);
-console.log(score);
-
 
 // Symbol
 const id = Symbol('id');
 
-
 // BigInt
 const n = 9007199254740991n;
-
 
 // Reference Types
 
@@ -64,16 +42,3 @@ console.log(output, typeof output);
 
 //  More info on the "function object" type
 // https://262.ecma-international.org/5.1/#sec-11.4.3
-
-
-let num1 =1.2;
-let str ='hello';
-console.log(typeof num1);
-console.log(typeof str);
-console.log(parseInt(str), typeof parseInt(str));
-console.log(num1.toString(), typeof num1.toString());
-
-
-const numbers2 = new Array();
-numbers2[0]=20;
-console.log
