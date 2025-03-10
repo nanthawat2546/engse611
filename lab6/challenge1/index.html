@@ -4,5 +4,11 @@
   <p>change this paragraph too.</p>
   <p>And change this last paragraph.</p>
 </div>
+
 <script>
+  const paragraphs = document.querySelectorAll('#main p');
+  paragraphs.forEach(paragraph => {
+    paragraph.style.fontSize = '24px';
+    paragraph.style.color = 'red';
+  });
 </script>

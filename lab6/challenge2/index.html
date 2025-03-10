@@ -1,14 +1,24 @@
 <p>don't change this paragraph</p>
 <div id="main">
-<p>Here is paragraph one</p>
-<p>Here is paragraph two</p>
-<p>Here is paragraph three</p>
-<p>Here is paragraph four</p>
-<p>Here is paragraph five</p>
-<p>Llamas and Chickens!</p>
-<p>Here is paragraph seven</p>
-<p>Here is paragraph eight</p>
-<p>Here is paragraph nine</p>
-<p>Here is paragraph ten</p>
-<p>Here is paragraph eleven</p>
-<p>He
+  <p>Here is paragraph one</p>
+  <p>Here is paragraph two</p>
+  <p>Here is paragraph three</p>
+  <p>Here is paragraph four</p>
+  <p>Here is paragraph five</p>
+  <p>Llamas and Chickens!</p>
+  <p>Here is paragraph seven</p>
+  <p>Here is paragraph eight</p>
+  <p>Here is paragraph nine</p>
+  <p>Here is paragraph ten</p>
+  <p>Here is paragraph eleven</p>
+  <p>Here is paragraph twelve</p>
+</div>
+
+<script>
+  const paragraphs = document.querySelectorAll('#main p');
+  paragraphs.forEach(paragraph => {
+    if (paragraph.textContent === 'Llamas and Chickens!') {
+      paragraph.style.color = 'red';
+    }
+  });
+</script>
