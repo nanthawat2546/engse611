@@ -1,19 +1,65 @@
-const X_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/x.png';
-const O_IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/circle.png';
-// Add event listeners?
+let board = ["", "", "", "", "", "", "", "", ""];
+let currentPlayer = "X";
+let xScore = 0;
+let oScore = 0;
+const cells = document.querySelectorAll(".cell");
+const scoreX = document.getElementById("score-x");
+const scoreO = document.getElementById("score-o");
+const resetButton = document.getElementById("reset-button");
 
-function changeToX(event) {
-  // Get the element that was clicked
-  const container = event.currentTarget;
-  // Create an <img> tag with the X img src
-  const image = document.createElement('img');
-  image.src = X_IMAGE_URL;
-  // Append that <img> tag to the element
-  container.appendChild(image);
-  container.removeEventListener('click', changeToX)
+function handleClick(index) {
+    if (board[index] === "") {
+        board[index] = currentPlayer;
+        cells[index].textContent = currentPlayer;
+        cells[index].classList.add(currentPlayer.toLowerCase());
+
+        if (checkWinner()) {
+            alert(`${currentPlayer} wins!`);
+            updateScore();
+            resetBoard();
+        } else if (board.every(cell => cell !== "")) {
+            alert("It's a draw!");
+            resetBoard();
+        } else {
+            currentPlayer = currentPlayer === "X" ? "O" : "X";
+        }
+    }
 }
 
-const boxes = document.querySelectorAll('#grid div');
-for (const box of boxes) {
-  box.addEventListener('click', changeToX);
+function checkWinner() {
+    const winPatterns = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+        [0, 4, 8], [2, 4, 6]             // diagonals
+    ];
+
+    return winPatterns.some(pattern => {
+        const [a, b, c] = pattern;
+        return board[a] && board[a] === board[b] && board[a] === board[c];
+    });
 }
+
+function updateScore() {
+    if (currentPlayer === "X") {
+        xScore++;
+        scoreX.textContent = `X: ${xScore}`;
+    } else {
+        oScore++;
+        scoreO.textContent = `O: ${oScore}`;
+    }
+}
+
+function resetBoard() {
+    board = ["", "", "", "", "", "", "", "", ""];
+    cells.forEach(cell => {
+        cell.textContent = "";
+        cell.classList.remove("x", "o");
+    });
+    currentPlayer = "X";
+}
+
+cells.forEach((cell, index) => {
+    cell.addEventListener("click", () => handleClick(index));
+});
+
+resetButton.addEventListener("click", resetBoard);
