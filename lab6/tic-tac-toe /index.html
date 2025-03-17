@@ -1,22 +1,31 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tic-Tac-Toe</title>
-  </head>
-  <body>
-  	<h1>Tic-Tac-Toe</h1>
-  	<div id="grid">
-      <div></div>
-      <div></div>
-      <div></div>
-
-      <div></div>
-      <div></div>
-      <div></div>
-
-      <div></div>
-      <div></div>
-      <div></div>
-  	</div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="score-board">
+            <p id="score-x">X: 0</p>
+            <p id="score-o">O: 0</p>
+        </div>
+        <div class="board">
+            <button class="cell" id="cell-0"></button>
+            <button class="cell" id="cell-1"></button>
+            <button class="cell" id="cell-2"></button>
+            <button class="cell" id="cell-3"></button>
+            <button class="cell" id="cell-4"></button>
+            <button class="cell" id="cell-5"></button>
+            <button class="cell" id="cell-6"></button>
+            <button class="cell" id="cell-7"></button>
+            <button class="cell" id="cell-8"></button>
+        </div>
+        <button id="reset-button">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
