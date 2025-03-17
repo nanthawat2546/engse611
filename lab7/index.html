@@ -1,76 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       
+        <h1>  <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*GR7KsWFb0v1rxkC58-UzbQ.jpeg" alt="รูปเสีย" width="250" height="250"> LAB7
+        JavaScript DOM Challenges</h1>  
+    </div>
+    
+    <div class="user-info">
+        <img src="https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/477584967_1305081947382169_3493306023911446606_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGBcdrUvqfaLJ91osbJFx7oKWarJsJSyk0pZqsmwlLKTVOIgV6KQBJRDerdtCn10_MNlsjtlfPA3QFWP3V2jh0J&_nc_ohc=EaxRFaNGJJ0Q7kNvgEugxj_&_nc_oc=AdhcbbpYbZPjjJrPExnNUfgc7QVmxz4czjtdMrEJU0hhiNv4SmMMkOdsQnpglEfeQ7Y-8XHj1rfzcNCQDRRPmzu_&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=iq6GIvTE_s0FGMugeRu33A&oh=00_AYF5ZaAoppn38WWOUEz3CfRhXMsd2B42WnhCZ0y3evBtlw&oe=67DE20D2" alt="รูปเสีย" width="100" height="100">
+        <p>นันทวัฒน์ แซ่ย่าง<br>67543210034-4<br>เทอม2 ปี1<br>การพัฒนาเว็บด้วยเทคโนโลยีสมัยใหม่</p>
+    </div>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Exercise</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="exerciseTable"></tbody>
+    </table>
 
-<!DOCTYPE html>    
-<html>    
-<body> 
-</script>
-<p>Click the button to create a Checkbox.</p>    
-
-<button onclick="myFunction()">Try it</button>    
-
-<script>    
-
-function myFunction() {    
-
-  var x = document.createElement("INPUT");    
-
-  x.setAttribute("type", "checkbox");    
-
-  document.body.appendChild(x);    
-
-}   
-function printName(name){
-    console.log(name);
-
-    } 
-
-    printName('A');
-    const printName2 = (name)=>{
-        console.log(name);
-    }
-    printName2('B');
-    const printName3 = (number) => {
-        return value.toUpperCase()};
-        const mul = (number) => {
- return number * 2
-}
-console.log(mul(2))
-
-
-    let names = ["Metin", "Mateo", "Tony", "Chris", "Leo"];
-names = names.map((value) => {
-    return value.toUpperCase()
-});
-
-/*
-setTimeout(() => {
-    console.log("This message will display");
-    console.log("After 5 second");
-    alert('Time-up');
-    console.log(names);
-}, 5000);
-*/
-
-class User {
-    constructor() {
-        this.name = "Metin";
-    }
-}
-
-let sayHi_Normal = function () {
-    console.log("Hi " + this.name);
-};
-
-let sayHi_Arrow = () => {
-    console.log("Hi " + this.name);
-};
-
-let user = new User();
-let sayHi1 = sayHi_Normal.bind(user);
-let sayHi2 = sayHi_Arrow.bind(user);
-
-sayHi1();
-sayHi2();
-</script>    
-
-</body>    
-</html>    
+    <script src="script.js"></script>
+</body>
+</html>
